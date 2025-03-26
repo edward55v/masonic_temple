@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grandmaster Occult - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <div class="logo-container">
+        <img class="logo" src="img/Untitled design.png" alt="logo">
+        <h2 class="logo-text">Masonic Temple</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </nav>
+  </header
+  
+  
+  <main class="homepage">
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Unlock Ancient Wisdom for Modern Wealth</h1>
+        <p>Join the enlightened few and discover the secrets of prosperity.</p>
+        <a href="https://wa.me/233541426498" class="btn">Whatsapp</a>
+        <a href="membership.html" class="btn">Email us</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2024 Grandmaster Occult. All Rights Reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY;
+  let logoContainer = document.querySelector(".logo-container");
+
+  if (scrollPosition > 50) {
+    logoContainer.classList.add("fade-out");
+  } else {
+    logoContainer.classList.remove("fade-out");
+  }
+});
+
+  </script>
+</body>
+</html>

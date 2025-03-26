@@ -1,0 +1,202 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Lora', serif;
+    background-color: #0A0A2A;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Header & Navigation */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .nav-menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  /* Center Logo & Text */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+}
+
+.logo {
+  width: 80px;
+  
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif;
+  color: #D4AF37;
+  font-size: 18px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+  .nav-menu li {
+    margin: 0 1rem;
+  }
+  .nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    transition: color 0.3s ease;
+  }
+  .nav-menu a:hover {
+    color: #D4AF37;
+  }
+  
+ /* Hero Section for Homepage */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Background Slideshow */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlideshow 30s infinite;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+
+/* Dark Gradient Overlay */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)); /* Dark gradient */
+  z-index: 1;
+}
+
+
+/* Keyframe Animation for Slideshow */
+@keyframes backgroundSlideshow {
+    0% { background-image: url('img/1.png'); }
+    16.66% { background-image: url('img/2.png'); }
+    33.33% { background-image: url('img/3.png'); }
+    50% { background-image: url('img/4.png'); }
+    66.66% { background-image: url('img/5.png'); }
+    83.33% { background-image: url('img/6.png'); }
+    100% { background-image: url('img/1.png'); }
+}
+
+
+
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Common Button Style */
+  .btn {
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .btn:hover {
+    background: #D4AF37;
+    color: #000000;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 100px 20px 60px;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
+    background: #222;
+    color: #fff;
+  }
+  form input::placeholder, form textarea::placeholder {
+    color: #aaa;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000000;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row-reverse; /* Puts logo at right, menu at left */
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+}
